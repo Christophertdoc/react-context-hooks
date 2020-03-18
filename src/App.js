@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react' 
 import Navbar from './components/Navbar'
 import BookList from './components/BookList'
-import ThemeContextProvider from './contexts/ThemeContext'
+import { ThemeContext } from './contexts/ThemeContext'
 
-function App() {
-	return (
-		<div className="App">
-			<ThemeContextProvider>
+class App extends Component {
+	static contextType = ThemeContext
+	render() {
+		console.log('this.context', this.context)
+		return (
+			<div className={`App ${this.context.theme}`}>				
 				<Navbar />
-				<BookList />
-			</ThemeContextProvider>
-		</div>
-	)
+				<BookList />			
+			</div>	
+		)
+	}
 }
 
 export default App
