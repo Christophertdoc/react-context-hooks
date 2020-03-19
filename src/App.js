@@ -8,7 +8,7 @@ class App extends Component {
 	render() {
 		console.log('this.context', this.context)
 		return (
-			<div className={`App ${this.context.theme}`}>				
+			<div className={`App ${this.context.theme}`}>		
 				<Navbar />
 				<BookList />			
 			</div>	
