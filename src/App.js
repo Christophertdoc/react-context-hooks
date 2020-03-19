@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from './components/Navbar'
 import BookList from './components/BookList'
 import { ThemeContext } from './contexts/ThemeContext'
+import ThemeToggle from './components/ThemeToggle'
 
 class App extends Component {
 	static contextType = ThemeContext
@@ -10,7 +11,8 @@ class App extends Component {
 		return (
 			<div className={`App ${this.context.theme}`}>		
 				<Navbar />
-				<BookList />			
+				<BookList />	
+				<ThemeToggle />		
 			</div>	
 		)
 	}

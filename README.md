@@ -5,3 +5,4 @@ From the following tutorial: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL
 
 ## Branches
 - lesson-1: displaying context
+- lesson-2: updating context variables
