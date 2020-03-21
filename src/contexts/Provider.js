@@ -1,12 +1,15 @@
 import React, { Component } from 'react' 
 import App from '../App'
 import ThemeContextProvider from './ThemeContext'
+import AuthContextProvider from './AuthContext'
 
 class Provider extends Component {
 	render() {
 		return (
 			<ThemeContextProvider>
-				<App />
+				<AuthContextProvider>
+					  <App />
+				</AuthContextProvider>
 			</ThemeContextProvider>
 		)
 	}

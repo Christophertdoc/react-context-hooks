@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import Provider from './contexts/Provider';
+// import App from './App'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Provider />, document.getElementById('root'));
