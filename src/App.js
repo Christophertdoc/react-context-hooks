@@ -1,6 +1,7 @@
 import React, { Component } from 'react' 
 import Navbar from './components/Navbar'
 import BookList from './components/BookList'
+import SongList from './components/SongList'
 import ThemeToggle from './components/ThemeToggle'
 import { ThemeContext } from './contexts/ThemeContext'
 import { AuthContext } from './contexts/AuthContext'
@@ -18,7 +19,8 @@ class App extends Component {
 								{ authenticated ? 'Logged In' : 'Logged Out' }	
 							</div>
 							<Navbar />
-							<BookList />	
+							<BookList />
+							<SongList />	
 							<ThemeToggle />		
 						</div>	
 					)	
