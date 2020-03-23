@@ -1,19 +1,29 @@
 import React, { Component } from 'react' 
 import Navbar from './components/Navbar'
 import BookList from './components/BookList'
-import { ThemeContext } from './contexts/ThemeContext'
 import ThemeToggle from './components/ThemeToggle'
+import { ThemeContext } from './contexts/ThemeContext'
+import { AuthContext } from './contexts/AuthContext'
+
 
 class App extends Component {
-	static contextType = ThemeContext
 	render() {
-		console.log('this.context', this.context)
 		return (
-			<div className={`App ${this.context.theme}`}>		
-				<Navbar />
-				<BookList />	
-				<ThemeToggle />		
-			</div>	
+			<AuthContext.Consumer>{(authContext) => (
+				<ThemeContext.Consumer>{(themeContext) => {
+					const { authenticated, toggleAuth } = authContext 
+					return (
+						<div className={`App ${themeContext.theme}`}>	
+							<div onClick={ toggleAuth }>
+								{ authenticated ? 'Logged In' : 'Logged Out' }	
+							</div>
+							<Navbar />
+							<BookList />	
+							<ThemeToggle />		
+						</div>	
+					)	
+				}}</ThemeContext.Consumer>
+			)}</AuthContext.Consumer>
 		)
 	}
 }
