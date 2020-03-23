@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import uuid  from 'uuid/v1'
 
 const SongList = () => { 
     const [songs, setSongs] = useState([
@@ -7,7 +8,7 @@ const SongList = () => {
         { title: 'This Wild Darkness', id: 3 }
     ])
     const addSong = () => {
-        setSongs([...songs, { title: 'new song', id: 4 }])
+        setSongs([...songs, { title: 'new song', id: uuid() }])
     }
     return (
         <div className='songList'>
