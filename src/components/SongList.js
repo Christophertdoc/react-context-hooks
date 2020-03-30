@@ -9,6 +9,7 @@ const SongList = () => {
         { title: 'Memory Gospel', id: 2 },
         { title: 'This Wild Darkness', id: 3 }
     ])
+    const [age, setAge] = useState(20)
 
     const addSong = (title) => {
         setSongs([...songs, { title: title, id: uuidv4() }])
@@ -16,7 +17,11 @@ const SongList = () => {
 
     useEffect(() => {
         console.log('useEffect hook ran', songs)
-    })
+    }, [songs]) // By specifying "songs" here, this method will only run when the songs state is changed. 
+
+    useEffect(() => {
+        console.log('useEffect hook ran', age)
+    }, [age])
 
     return (
         <div className='songList'>
@@ -28,6 +33,7 @@ const SongList = () => {
                 })}
             </ul>
             <NewSongForm addSong={addSong} />
+            <button onClick={() => setAge(age + 1)}>Add 1 to age: {age}</button>
         </div>
     )
 }

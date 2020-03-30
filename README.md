@@ -14,4 +14,4 @@ From the following tutorial: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL
 - Context: used for global state
 - hook: used to do a variety of different things in functional components
 - useState(): a hook that is used for state
-- useEffect(): Very similar to the "lifecycle methods" that are used in class components. useEffect() allows for the manipulation of functional components during "mounting", "updating" and "unmounting".
+- useEffect(): This hook is like the "componentDidUpdate method" that is used in class components.
