@@ -1,4 +1,4 @@
-import React from 'react' 
+import React, { useContext } from 'react' 
 import Navbar from './components/Navbar'
 import BookList from './components/BookList'
 import ThemeToggle from './components/ThemeToggle'
@@ -7,23 +7,18 @@ import { AuthContext } from './contexts/AuthContext'
 
 
 const App = () => {
+	const { theme } = useContext(ThemeContext)
+	const { authenticated, toggleAuth } = useContext(AuthContext)
 	return (
-		<AuthContext.Consumer>{(authContext) => (
-			<ThemeContext.Consumer>{(themeContext) => {
-				const { authenticated, toggleAuth } = authContext 
-				return (
-					<div className={`App ${themeContext.theme}`}>	
-						<div onClick={ toggleAuth }>
-							{ authenticated ? 'Logged In' : 'Logged Out' }	
-						</div>
-						<Navbar />
-						<BookList />	
-						<ThemeToggle />		
-					</div>	
-				)	
-			}}</ThemeContext.Consumer>
-		)}</AuthContext.Consumer>
-	)
+		<div className={`App ${theme}`}>	
+			<div onClick={ toggleAuth }>
+				{ authenticated ? 'Logged In' : 'Logged Out' }	
+			</div>
+			<Navbar />
+			<BookList />	
+			<ThemeToggle />		
+		</div>	
+	)	
 }
 
 export default App
