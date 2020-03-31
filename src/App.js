@@ -1,22 +1,18 @@
-import React, { useContext } from 'react' 
-import Navbar from './components/Navbar'
+import React from 'react' 
+import BookContextProvider from './contexts/BookContext'
+import Navbar from './components/Navbar' 
 import BookList from './components/BookList'
-import ThemeToggle from './components/ThemeToggle'
-import { ThemeContext } from './contexts/ThemeContext'
-import { AuthContext } from './contexts/AuthContext'
+import NewBookForm from './components/BookForm'
 
 
-const App = () => {
-	const { theme } = useContext(ThemeContext)
-	const { authenticated, toggleAuth } = useContext(AuthContext)
+function App() {
 	return (
-		<div className={`App ${theme}`}>	
-			<div onClick={ toggleAuth }>
-				{ authenticated ? 'Logged In' : 'Logged Out' }	
-			</div>
-			<Navbar />
-			<BookList />	
-			<ThemeToggle />		
+		<div className='App'>
+			<BookContextProvider>
+				<Navbar />
+				<BookList />
+				<NewBookForm />
+			</BookContextProvider>
 		</div>	
 	)	
 }
