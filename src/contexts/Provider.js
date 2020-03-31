@@ -1,18 +1,19 @@
-import React, { Component } from 'react' 
+import React from 'react' 
 import App from '../App'
 import ThemeContextProvider from './ThemeContext'
 import AuthContextProvider from './AuthContext'
+import BookContextProvider from './BookContext'
 
-class Provider extends Component {
-	render() {
-		return (
-			<ThemeContextProvider>
-				<AuthContextProvider>
-					  <App />
-				</AuthContextProvider>
-			</ThemeContextProvider>
-		)
-	}
+const Provider = () => {
+	return (
+		<ThemeContextProvider>
+			<AuthContextProvider>
+				<BookContextProvider>
+					<App />
+				</BookContextProvider>
+			</AuthContextProvider>
+		</ThemeContextProvider>
+	)
 }
 
 export default Provider
