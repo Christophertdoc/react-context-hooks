@@ -21,5 +21,9 @@ From the following tutorial: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL
 - useEffect(): This hook is like the "componentDidUpdate method" that is used in class components.
 - Reducer: Consolidates all functions that alter context variables (global state). There are 3 parts:
     1. Reducer Function: interacts with the state / data 
+        - The reducer function takes two parameters like so: `reducer(action, state)`
+        - This function checks the action type, updates the state object and then returns the state.
     2. Action: describes the type of change that we want to make inside the reducer function
+        - action object example: `{type: 'ADD_BOOK', book: {title: "The Wind", author: "Roy Wills"}}`
     3. Dispatcher: sends the action to the reducer function
+        - dispatch function example: `dispatch({type: 'ADD_BOOK', book: {title: "The Wind", author: "Roy Wills"}})`
