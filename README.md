@@ -11,6 +11,7 @@ From the following tutorial: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL
 - lesson-5: how to use the useEffect() hook
 - lesson-6: Use a single context within a functional component by utilizing hooks
 - lesson-7: Use multiple contexts with hooks and functional components
+- lesson-8: Reading List Project: Practice with combining functional components with hooks and context
 
 ## Terms
 - Context: used for global state
