@@ -9,6 +9,7 @@ From the following tutorial: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL
 - lesson-3: how to use two different contexts in the same component
 - lesson-4: how to use the useState() hook
 - lesson-5: how to use the useEffect() hook
+- lesson-6: Use a single context within a functional component by utilizing hooks
 
 ## Terms
 - Context: used for global state
