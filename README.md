@@ -12,14 +12,14 @@ From the following tutorial: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL
 - lesson-6: Use a single context within a functional component by utilizing hooks
 - lesson-7: Use multiple contexts with hooks and functional components
 - lesson-8: Reading List Project: Practice of combining functional components, hooks and context
-- lesson-9: Actions, Reducers and States
+- lesson-9: Add a reducer to consolidate/simplify functions that alter context variables.
 
 ## Terms
 - Context: used for global state
 - hook: used to do a variety of different things in functional components
 - useState(): a hook that is used for state
 - useEffect(): This hook is like the "componentDidUpdate method" that is used in class components.
-- Reducer: Consolidates all functions that alter context variables (global state). There are 3 parts:
+- Reducer: Consolidates functions that alter context variables (global state). There are 3 parts:
     1. Reducer Function: interacts with the state / data 
         - The reducer function takes two parameters like so: `reducer(action, state)`
         - This function checks the action type, updates the state object and then returns the state.
