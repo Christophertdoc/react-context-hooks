@@ -13,6 +13,7 @@ From the following tutorial: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL
 - lesson-7: Use multiple contexts with hooks and functional components
 - lesson-8: Reading List Project: Practice of combining functional components, hooks and context
 - lesson-9: Add a reducer to consolidate/simplify functions that alter context variables.
+- lesson-10: Add local storage
 
 ## Terms
 - Context: used for global state
